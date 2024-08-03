@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="cabecera">
+            <img class="logo" src="assets/LogoA.svg" alt="logo de alura">
+        </div>        
+    </header>
+    <main>
+        <div class="parte_encriptador">
+            <textarea  class="texto_usuario" type="text" id="texto_a_modificar" placeholder="Ingrese el texto aqui" required spellcheck="false"></textarea>
+            <div class= "encriptador_contenedor">
+                <div class="parte_encriptador_aviso">
+                    <img src="assets/bi_exclamation-circle-fill.svg">
+                    <p class="advertencia">Solo letras mininusculas y sin acento</p>
+                </div>
+                <div class="encriptador_contenedor_botones">
+                    <button onclick="botonEncriptar()" class="boton_encriptar" id="cifrar">Encriptar</button>
+                    <button onclick="botonDesencriptar()" class="boton_desencriptar" id="decifrar">Desencriptar</button>
+                    <button onclick="botonBorrar()" class="boton_borrar" id="borrar">Borrar</button>
+                </div>
+            </div>
+        </div>
+            
+        <div class="parte_resultado">
+                <div class= "cosas_a_ocultar" id="leyenda_ocultar">
+                    <img class= "dibujo" id="imagen_ejemplo" src="assets/Muñeco.svg" alt="personaje buscando">
+                    <div class="textos_instructivos">
+                    <p class="texto_no_encontrado" id="texto_no_encontrado">Ningún mensaje fue encontrado</p> 
+                    <p class="instruccion"id="instruccion">Ingresa el texto que deseas encriptar o desencriptar.</p>
+                    </div>
+                </div>
+                <div class="zona_de_resultado">
+                    <textarea  class="oculto texto_resultado" type="text" id="texto_resultado" spellcheck="false" readonly></textarea>
+                    <div class="contenedor_botones_resultado">
+                        <button onclick="copiar()" class="boton_copiar" id="copiar" hidden>Copiar</button>
+                    </div>
+     
+                </div>
+            
+         </div>
+    </main>
+    <footer class="footer">
+            <p class =referencia>Desarrollado por <strong class="nombre">Kevin Molina</strong> 2024</p>
+    </footer>
+    <div id="alerta_personal" class="alerta">
+        <div class="contenido_alerta">
+            <span id="texto_alerta" class="texto_alerta"></span>
+            <button class="boton_cerrar_alerta" onclick="cerrarAlerta()">Cerrar</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

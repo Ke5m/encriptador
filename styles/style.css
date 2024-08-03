@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --blanco: #ffffff ;
+    --blanco-primario: #F3F5FC ;
+    --blanco-secundario: #EFF1FA ;
+    --blanco-terciario: #E9ECF8 ;
+    --blanco-sombra :#D8DFE8 ;
+    --azul-primario: #0A3871 ;
+    --azul-secundario: #072B61 ;
+    --fuente-primaria: "Inter", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+}
+button{
+    text-align: center;
+    border: 1px solid ;
+    height: 2.5rem;
+    width: 30%;
+    padding: 0.625rem;
+    border-radius: 1.25em;
+}
+button:hover,
+.button:hover {
+    cursor:pointer
+}
+textarea, textarea:focus {
+    outline: none;
+    border: none;
+}
+body{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh ;
+    width: 100%;
+    background-color: var(--blanco-secundario);
+
+}
+
+header{
+    position: absolute;
+    margin: 1.5% 0 0 2.5em; 
+}
+header.logo{
+    display: flex;
+    align-items: flex-start;
+    width: 7.5em;
+    height: 3em;
+}
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+}
+.parte_encriptador{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+    height: 78vh;
+    margin: 12vh 0 0 10%;
+}
+.texto_usuario{
+    width: 92%;
+    min-height: 70%;
+
+    resize: none; 
+    padding: 0.9rem;
+    background: transparent;
+    font-family: var(--fuente-primaria);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--azul-primario); 
+}
+.encriptador_contenedor{
+    display: flex;
+    flex-direction: column;
+}
+.parte_encriptador_aviso{
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-family: var(--fuente-primaria);
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+.encriptador_contenedor_botones{
+    display:flex;
+    align-items: flex-start;
+    gap: 3%;
+}
+.boton_encriptar{
+    background-color: var(--azul-primario);
+    color: var(--blanco);
+}
+.boton_encriptar:hover{
+    background-color: var(--azul-secundario);
+}
+.boton_desencriptar{
+    text-align: center;
+    margin: 0 2px 0 2px;
+    background-color:var(--blanco-secundario);
+    color: var(--azul-primario);
+    border-color: var(--azul-primario);
+}
+.boton_desencriptar:hover{
+    background-color: var(--blanco-sombra);
+}
+.boton_borrar{
+    background-color: var(--blanco-secundario);
+    color: var(--azul-primario);
+    border-color: var(--azul-primario);
+}
+.boton_borrar:hover{
+    background-color: var(--blanco-sombra);
+}
+.parte_resultado{ 
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 85vh;
+    border-radius: 1.25rem;
+    margin: 5vh 3% 0 0;
+    background-color: var(--blanco);
+    box-shadow: 2px 2px 3px;
+}
+.oculto{
+    display: none;
+}
+.cosas_a_ocultar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 1rem;
+    padding-top: 40%;
+    height: 100%;
+}
+.dibujo{
+    height: 50%;
+}
+.textos_instructivos{
+    gap: 16px;
+}
+.texto_no_encontrado{
+    font-family: var(--fuente-primaria);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: #343A40;
+}
+.instruccion{
+    font-family: var(--fuente-primaria);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #495057;
+
+}
+.zona_de_resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95%;
+}
+.texto_resultado{  
+    resize: none;
+    width: 90%;
+    height: 100%;
+    margin: 5vh 3% 0 3%;
+    font-family: var(--fuente-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.625rem;
+    color: #495057;
+    user-select: text;
+}
+.contenedor_botones_resultado{
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+.boton_copiar{
+    width: 60%;
+    background-color: var(--blanco);
+    color: var(--azul-primario);
+    border-color: var(--azul-primario);
+}
+.boton_copiar:hover{
+    background-color: var(--blanco-sombra);
+}
+.footer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--azul-primario);
+}
+.referencia{
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--blanco);
+    font-family: var(--fuente-primaria);
+}
+.nombre{
+    font-weight: 500;
+}
+
+.alerta{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    background-color: var(--blanco);
+    color: var(--azul-primario);
+    border-radius: 1.25rem;
+    z-index: 1000;
+    max-width: 90%;
+    width: 300px;
+    box-shadow: 2px 2px 3px;
+}
+.contenido_alerta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.texto_alerta{
+    font-family: var(--fuente-primaria);
+    font-weight: 600;
+    font-size: larger;
+    padding: 1rem;
+}
+.boton_cerrar_alerta{
+    background-color: var(--azul-primario);
+    color: var(--blanco);
+}
+.boton_cerrar_alerta:hover{
+    background-color: var(--azul-secundario);
+}
+
+/*estilo para tablet*/
+
+@media only screen and (max-width: 768px) {
+    button{
+        height: 3rem;
+    }
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+    header{
+        position: relative;
+        margin-top: 8%;
+    }
+
+    .parte_encriptador{
+        height: 67vh;
+        width: 80%;
+        margin: 0;
+    }
+    .parte_resultado{
+        height: auto;
+        width: 80%;
+        padding-top: 2%;
+        margin: 0 0 3% 0;
+        align-items: center;
+    }
+    .cosas_a_ocultar{
+        padding-top:5%;
+    }
+    .dibujo{
+        display: none;
+    }
+    .zona_de_resultado{
+        height: auto;
+        width: 95% ;
+    }
+    .texto_resultado{
+        height: 30px;
+        margin: 0;
+        max-height: 50vh;
+    }
+}
+
+/* estilo de celulares*/
+
+@media only screen and (max-width:375px) {
+    button{
+        width: 100%;
+    }
+    header{
+        position: relative;
+        margin: 5% 0 4% 0; 
+    }
+    main{
+        gap: 2vh;
+    }
+    .parte_encriptador{
+        height: auto;
+        margin: 0 0 0 0;
+    }
+    .texto_usuario{
+        margin: 5% 0 2% 0;
+        min-height: 40vh;
+        height: 50px;
+        width: 100%;
+        padding: 4% 0 0 0;
+        max-height: 75vh;
+    }
+    .encriptador_contenedor{
+        gap: 2vh;
+    }
+    .encriptador_contenedor_botones{
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+    .parte_resultado{
+        height: auto;
+        padding: 3% 0 3% 0;
+        margin: 0 0 4vh 0;
+    }
+    .zona_de_resultado{
+        height: auto;
+    }
+    .cosas_a_ocultar{
+        padding: 5px 5px 5px 5px;
+    }
+    .texto_resultado{
+        height: auto;
+        max-height: 60vh;
+    }
+    .boton_copiar{
+        width: 90%;
+    }
+}
